@@ -1,0 +1,8 @@
+{
+    "name": "site jeferson",
+    "description" : "site thecman",
+    "require": {
+        "php": "~7.1"
+    },
+    "license": "MIYT"
+}

@@ -1,0 +1,6 @@
+.idea/
+.npm-cache/
+node_modules/
+.npm-cache/
+dist/
+/node_modules
