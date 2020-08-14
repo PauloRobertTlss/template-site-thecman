@@ -48,7 +48,7 @@ const cssString = `.snowfall-container {
 
   .snowflake {
     pointer-events: none;
-    color: #31c8d899;
+    color: #31c8d857;
     display: block;
     font-size: 24px;
     left: -12px;

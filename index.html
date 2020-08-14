@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Reveal Bootstrap Template</title>
+  <title>THECMAN - refrigeração</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -60,10 +60,27 @@
         <a itemprop="url" rel="noopener" href="https://api.whatsapp.com/send?phone=5511941669341" target="_blank" title="continue no WhatsApp"></a>
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Home</a></li>
-          <li><a href="#about">Sobre empresa</a></li>
+          <li><a href="#about">Sobre nós</a></li>
           <li><a href="#services">Serviços</a></li>
           <!--<li><a href="#portfolio">Portfolio</a></li>-->
-          <li><a href="#team">Team</a></li>
+          <li><a href="#team">Equipe</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <div class="fan">
+              <div class="col-md-6 col-lg-6 buttons">
+                <p class="stop">0</p>
+                <p class="first">1</p>
+                <p class="second">2</p>
+                <p class="third">3</p>
+              </div>
+              <div class="col-md-3 col-lg-3 svg">
+                <img class="wings" src="https://i.ya-webdesign.com/images/fan-blades-png.png" alt="">
+              </div>
+              <div class="col-md-6 col-lg-3 svg">
+                <img class="wings" src="https://i.ya-webdesign.com/images/fan-blades-png.png" alt="">
+              </div>
+            </div>
+          </li>
           <!--<li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -72,9 +89,11 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li>-->
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
+      <span style="position:relative;">
+        <canvas id="smoke-animation" width="1000px" height="1000px"></canvas>
+      </span>
     </div>
   </header><!-- End Header -->
 
@@ -121,7 +140,6 @@
 
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 
@@ -448,6 +466,8 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/snowfall.js"></script>
+  <script src="assets/js/fan.js"></script>
+  <script src="assets/js/smoke.js"></script>
 
 </body>
 
