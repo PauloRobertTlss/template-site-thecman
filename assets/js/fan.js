@@ -6,8 +6,18 @@ var firstAction = false;
 
 btns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        let arr = [];
+
         e.target.parentNode.querySelectorAll("p").forEach((child) => {
+            if (child === e.target && !(child.classList.contains("stop"))) {
+                child.classList.add('active-neon');
+            }
+            else {
+                child.classList.remove('active-neon');
+            }
+        });
+
+        e.target.parentNode.querySelectorAll("p").forEach((child) => {
+
             if (child !== e.target) {
 
                 if (e.target.classList.contains("first")) {
@@ -15,10 +25,11 @@ btns.forEach((btn) => {
                     canvas.style.display="inherit";
                     wingsImgs.forEach((wingsImg) => {
                         wingsImg.classList.add("one");
-                        wingsImg.style.animationDuration = `1s`;
+                        wingsImg.style.animationDuration = `1.3s`;
                         wingsImg.style.animationPlayState = `running`;
                     })
                 } else if (e.target.classList.contains("second")) {
+                    e.target.classList.add("active-neon");
                     canvas.style.display="inherit";
                     wingsImgs.forEach((wingsImg) => {
                         wingsImg.classList.add("two");
@@ -27,18 +38,18 @@ btns.forEach((btn) => {
                     });
 
                 } else if (e.target.classList.contains("third")) {
+                    e.target.classList.add('active-neon');
                     canvas.style.display="inherit";
 
                     wingsImgs.forEach((wingsImg) => {
                         wingsImg.classList.add("third");
-                        wingsImg.style.animationDuration = `0.1s`;
+                        wingsImg.style.animationDuration = `0.01s`;
                         wingsImg.style.animationPlayState = `running`;
                     });
 
                 } else if (e.target.classList.contains("stop")) {
 
                     canvas.style.display="none";
-
                     wingsImgs.forEach((wingsImg) => {
                         wingsImg.classList.add("stop");
                         wingsImg.style.animationPlayState = `paused`;
@@ -51,11 +62,7 @@ btns.forEach((btn) => {
 
     if (!firstAction) {
         canvas.style.display="inherit";
-        wingsImgs.forEach((wingsImg) => {
-            wingsImg.classList.add("one");
-            wingsImg.style.animationDuration = `1s`;
-            wingsImg.style.animationPlayState = `running`;
-        })
+        btns[0].click();
         firstAction = true;
     }
 });

@@ -90,14 +90,14 @@ $.fn.emitter = function(opts){
 // }).render();
 
 $('canvas').emitter({
-    x: 810,
-    y: 0,
-    size: 60,
-    particles: 90,
+    x: 40,
+    y: 60,
+    size: 70,
+    particles: 160,
     speed: {
-        x: -3,
-        y: 6,
-        fade: 120,
+        x: 2,
+        y: -6,
+        fade: 60,
         acceleration: 60
     }
 }).render();

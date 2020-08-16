@@ -134,8 +134,28 @@
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
 
+  //anitamed svg fan.js
+  let btns = document.querySelectorAll(".buttons p");
+
   $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 200;
+      var percent = parseInt(100 * cur_pos / ($(document).height() - $(window).height()));
+
+      if (percent < 10) {
+          btns[0].click();
+      }
+      else if (percent >= 10 && percent < 40) {
+          btns[1].click();
+      }
+      else if (percent >= 40 && percent < 75) {
+          btns[2].click();
+      }
+      else if (percent >= 75) {
+          btns[3].click();
+      }
+
+
+
 
     nav_sections.each(function() {
       var top = $(this).offset().top,
